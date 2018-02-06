@@ -1,0 +1,53 @@
+<html>
+<head>
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> Puzzle Game </title>
+<script src = "jquery-3.3.1.min.js"></script>
+<script src = "puzzle.js"></script>
+
+<link rel="stylesheet" href="puzzle.css">
+</head>
+<body>
+<div id= "start_game_page" class = "container">
+  <div id = "merhaba">
+  <h1 >Sliding Puzzle</h1>
+  </div>
+  <input type ="button" id = "start_game" class = "homepage" value = "Start Game" onclick = "transition(1)"></input>
+  <input type = "button" id = "options-button" class = "homepage" value = "Options" onclick = "transition(2)"></input>
+</div>
+
+<div id = "puzzle" style="display:none;">
+<div id = point_counter ></div>
+<div>Click here</div>
+<!--
+<input type = "button" class = "create_puzzle" id = "3*3_puzzle" value = "3" onclick = "func(3)" ></input>
+<input type = "button" class = "create_puzzle" id = "4*4_puzzle" value = "4" onclick = "func(4)" ></input>
+<input type = "button" class = "create_puzzle" id = "5*5_puzzle" value = "5" onclick = "func(5)" ></input>
+-->
+
+</div>
+
+<div id = "options" class = "container" style="display:none;">
+  <div id = "options-title">
+    <h1>Options</h1>
+  </div>
+
+  <div id="puzzle_size">
+
+    <h3 style = "color:green; margin-left: 10vw;">Choose size of the puzzle : </h3>
+
+    <div id = "option_1" class = "size_of_puzzle" onclick = "give_size(3)">3</div>
+    <div id = "option_2" class = "size_of_puzzle" onclick = "give_size(4)">4</div>
+    <div id = "option_3" class = "size_of_puzzle" onclick = "give_size(5)">5</div>
+
+  </div>
+
+  <input type='file' id = "choose_file" onchange="readURL(this);" />
+<!--  <img id="blah" style = "height = 3vh;" src="#" alt="your image" /> -->
+  <input type ="button" id = "start_game" class = "homepage" value = "Start Game" onclick = "transition(1)"></input>
+
+</div>
+
+
+</body>
+<html>
